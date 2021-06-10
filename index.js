@@ -153,7 +153,6 @@ function getReviewByRating(reviews, rating_lower_bound) {
   };
   return reviews.filter(filterer);
 }
-console.log(getReviewByRating(reviews, 4));
   
 /* 💪💪💪💪💪💪💪💪💪💪 STRETCH 2: 💪💪💪💪💪💪💪💪💪💪   
 Use the getLongReviews function below to do the following:
@@ -168,10 +167,13 @@ Use the getLongReviews function below to do the following:
   ]
 */
 
-function getLongReviews(/* code here */) {
-    /* code here */
-  }
-  
+function getLongReviews(reviews) {
+  const isLong = function(review) {
+    return review.feedback.split(' ').length > 15;
+  };
+  return reviews.filter(isLong);
+}
+console.log(getLongReviews(reviews));
 
 /* 💪💪💪💪💪💪💪💪💪💪 STRETCH 3: 💪💪💪💪💪💪💪💪💪💪 
 This stretch goal does not use the reviews data!  You create your own object in this stretch goal.
