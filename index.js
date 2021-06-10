@@ -76,8 +76,9 @@ Using the reviews array above:
   1. log only Julius' feedback to the console - no function needed 
 */
 
-
-
+for (let i = 0; i < reviews.length; i++) {
+  if (reviews[i].name == "Julius") console.log(reviews[i].feedback);
+}
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 Using the reviews array above do the following: (no function needed) 
