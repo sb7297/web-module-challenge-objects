@@ -147,10 +147,13 @@ Use the getReviewsByRating function below to do the following:
   ]
 */
 
- function getReviewByRating(/* code here */) {
-    /* code here */
-  }
-
+function getReviewByRating(reviews, rating_lower_bound) {
+  let filterer = function(review) {
+    return (rating_lower_bound <= review.rating && review.rating <= rating_lower_bound + 0.9);
+  };
+  return reviews.filter(filterer);
+}
+console.log(getReviewByRating(reviews, 4));
   
 /* 💪💪💪💪💪💪💪💪💪💪 STRETCH 2: 💪💪💪💪💪💪💪💪💪💪   
 Use the getLongReviews function below to do the following:
